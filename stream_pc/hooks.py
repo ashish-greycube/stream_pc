@@ -23,7 +23,7 @@ app_license = "MIT"
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
-after_migrate = "stream_pc.migrate.payment_type_allow_on_submit"
+after_migrate = "stream_pc.migrate.after_migrate"
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
