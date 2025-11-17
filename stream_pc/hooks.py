@@ -116,13 +116,14 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Event Producer GC": {
+		"on_change": "stream_pc.api.payment_type_allow_on_submit",
+	},
+    "Delivery Note": {
+        "on_update_after_submit": "stream_pc.api.update_payment_type_in_so",
+    },
+}
 
 # Scheduled Tasks
 # ---------------
