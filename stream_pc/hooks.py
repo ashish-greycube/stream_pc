@@ -23,6 +23,7 @@ app_license = "MIT"
 # webform_include_js = {"doctype": "public/js/doctype.js"}
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
+after_migrate = "stream_pc.migrate.payment_type_allow_on_submit"
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
 
@@ -118,7 +119,7 @@ app_license = "MIT"
 
 doc_events = {
 	"Event Producer GC": {
-		"on_change": "stream_pc.api.payment_type_allow_on_submit",
+		"on_change": "stream_pc.migrate.payment_type_allow_on_submit",
 	},
     "Delivery Note": {
         "on_update_after_submit": "stream_pc.api.update_payment_type_in_so",
