@@ -1,6 +1,9 @@
 import frappe
 from frappe import _
 
+def after_migrate():
+    payment_type_allow_on_submit(None, None)
+
 def payment_type_allow_on_submit(doc, method):
     print("FROM STREAM PC HOOK ---------------------------------------------------")
     payment_type_field_in_dn = frappe.db.exists(
