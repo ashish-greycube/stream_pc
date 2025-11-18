@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/stream_pc/stream_pc/public/js/edit_posting.bundle.js"],
+  "sourcesContent": ["\n\n$(document).on(\"form-refresh\", function (event, frm) {  \n    console.log(\"FROM STREAM PC\")\n    if (frappe.meta.has_field(frm.doc.doctype, \"set_posting_time\") && frm.is_new()) {\n            console.log(\"--------has field-----------\")\n            setTimeout(() => {\n\t\t\t\tfrm.doc.set_posting_time = 1;\n                frm.refresh_field(\"set_posting_time\");\n            }, 500);\n        }\n})"],
+  "mappings": "MAEA,EAAE,QAAQ,EAAE,GAAG,eAAgB,SAAU,EAAO,EAAK,CACjD,QAAQ,IAAI,gBAAgB,EACxB,OAAO,KAAK,UAAU,EAAI,IAAI,QAAS,kBAAkB,GAAK,EAAI,OAAO,GACrE,SAAQ,IAAI,8BAA8B,EAC1C,WAAW,IAAM,CACzB,EAAI,IAAI,iBAAmB,EACf,EAAI,cAAc,kBAAkB,CACxC,EAAG,GAAG,EAElB,CAAC",
+  "names": []
+}
